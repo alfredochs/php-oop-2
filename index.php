@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . "/classi/informatico.php";
 require_once __DIR__ . "/classi/alimentare.php";
+require_once __DIR__ . "/classi/user-premium.php"
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ require_once __DIR__ . "/classi/alimentare.php";
 </head>
 
 <body>
-    <main>
+    <main style="">
         <div>
 
             <h1>Prodotto Informatico</h1>
@@ -43,6 +44,26 @@ require_once __DIR__ . "/classi/alimentare.php";
                 <?php echo $prodAlimentare->getNamePrice(); ?>
 
             </h2>
+
+        </div>
+
+        <div>
+            <h1>Dati Utente</h1>
+            <?php
+
+            $nuovoUtente = new User("Alfredo", "Chanta");
+            $nuovoUtente->setEmail("alfredo.chs@hotmai.it");
+            echo $nuovoUtente->stampaDati();
+            ?>
+        </div>
+
+        <div>
+            <h1>Dati utente Premium</h1>
+            <?php
+            $utentePremium = new UserPremium("Lo sconto verrà Applicato a questo user.");
+            var_dump($utentePremium);
+            echo $utentePremium->stampaDati();
+            ?>
 
         </div>
     </main>
