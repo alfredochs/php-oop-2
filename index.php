@@ -64,11 +64,32 @@ require_once __DIR__ . "/data/data.php";
             foreach ($users as $user) {
                 // var_dump($user);
                 $newUser = new User($user);
+                // var_dump($newUser);
                 echo $newUser->stampaDati() . "<br>";
             };
 
 
             ?>
+        </div>
+
+        <div>
+            <h1>Dati Utenti premium</h1>
+            <ul style="display: flex;">
+                <?php
+                // var_dump($users);
+                foreach ($users as $user) {
+                    // var_dump($user);
+                    $newUser = new UserPremium($user);
+                    // var_dump($newUser);
+                ?>
+                    <?php
+                    echo $newUser->stampaDatiHtml() . "<br>";
+                    echo $newUser->setPremium();
+                    ?>
+                <?php
+                };
+                ?>
+            </ul>
         </div>
 
 

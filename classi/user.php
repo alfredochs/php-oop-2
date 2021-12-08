@@ -12,15 +12,12 @@ class User
         $this->id = $arr["id"];
     }
 
-    public function setEmail($val)
-    {
-        $this->email = $val;
-    }
 
     public function stampaDati()
     {
         return
-            $this->id . " Dati Utente: " .  $this->fullName . "<br>" .
+            $this->id . " Dati Utente: " .
+            $this->fullName . "<br>" .
             "Email Utente: " . $this->email;
     }
 }
