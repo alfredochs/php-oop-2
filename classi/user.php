@@ -1,14 +1,15 @@
 <?php
 class User
 {
-    protected $name;
-    protected $surname;
+    protected $fullName;
     protected $email;
+    protected $id;
 
-    function __construct($name, $surname)
+    function __construct($arr)
     {
-        $this->name = $name;
-        $this->surname = $surname;
+        $this->fullName = $arr["fullName"];
+        $this->email = $arr["email"];
+        $this->id = $arr["id"];
     }
 
     public function setEmail($val)
@@ -19,8 +20,7 @@ class User
     public function stampaDati()
     {
         return
-            "Nome Utente: " .  $this->name . "<br>" .
-            "Cognome Utente: " .  $this->surname . "<br>" .
+            $this->id . " Dati Utente: " .  $this->fullName . "<br>" .
             "Email Utente: " . $this->email;
     }
 }
