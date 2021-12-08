@@ -10,6 +10,7 @@ class Informatico extends Product
     function __construct($_ram, $_ssd)
     {
         parent::__construct("Computer", "$350");
+
         $this->ram = $_ram;
         $this->ssd = $_ssd;
     }
