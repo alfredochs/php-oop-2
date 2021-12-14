@@ -70,6 +70,18 @@ require_once __DIR__ . "/data/data.php";
 
 
             ?>
+
+            <?php
+            try {
+                throw new Exception("Testo dell'errore");
+            } catch (Exception $example) {
+            ?>
+                <strong style="color: red;">
+                    <?php echo "Errore: " . $example->getMessage(); ?>
+                </strong>
+            <?php
+            }
+            ?>
         </div>
 
         <div>
