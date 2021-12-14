@@ -85,6 +85,7 @@ require_once __DIR__ . "/data/data.php";
                     <?php
                     echo $newUser->stampaDatiHtml() . "<br>";
                     echo $newUser->setPremium();
+                    // echo $newUser->getSconto();
                     ?>
                 <?php
                 };
